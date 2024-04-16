@@ -1,0 +1,32 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+    <a href="{% url 'pages:home' %}" class="navbar-brand p-0">
+        <!-- <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1> -->
+        <!-- <h1 class="m-0">FERDSILINKS</h1> -->
+        <img src="{% static 'img/ferdsilinks-logo.jpg' %}" width="150" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <a href="{% url 'pages:home' %}" class="nav-item nav-link  {% if 'home' in active_links %} active {% endif %} ">Home</a> 
+            <a href="{% url 'pages:about' %}" class="nav-item nav-link  {% if 'about' in active_links %} active {% endif %} ">About</a> 
+            <a href="{% url 'pages:services' %}" class="nav-item nav-link  {% if 'services' in active_links %} active {% endif %} ">Services</a> 
+            <a href="{% url 'blog:bp-list' %}" class="nav-item nav-link {% if 'blog' in active_links %} active {% endif %} ">Blog</a>
+            <!-- <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu m-0">
+                    <a href="price.html" class="dropdown-item">Pricing Plan</a>
+                    <a href="feature.html" class="dropdown-item">Our features</a>
+                    <a href="team.html" class="dropdown-item">Team Members</a>
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="quote.html" class="dropdown-item">Free Quote</a>
+                </div>
+            </div> -->
+            <a href="{% url 'pages:contact' %}" class="nav-item nav-link  {% if 'contact' in active_links %} active {% endif %} ">Contact</a> 
+        </div>
+        <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
+        <!-- <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a> -->
+    </div>
+</nav>

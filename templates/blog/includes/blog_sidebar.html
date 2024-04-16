@@ -1,0 +1,46 @@
+<div class="col-lg-4">
+    <!-- Search Form Start -->
+    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+        <form method="GET" action="{% url 'blog:bp-list-search' %}">
+        <div class="input-group">
+            <input type="text" class="form-control p-3" name="q" placeholder="Keyword">
+            <button class="btn btn-primary px-4" type="submit"><i class="bi bi-search"></i></button>
+        </div>
+    </form>
+    </div>
+    <!-- Search Form End -->
+
+    <!-- Category Start -->
+    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+            <h3 class="mb-0">Categories</h3>
+        </div>
+        <div class="link-animated d-flex flex-column justify-content-start text-capitalize">
+            {% for cat in blog_categories %}
+            <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="{% url 'blog:bp-list-category' category_slug=cat.slug %}"><i class="bi bi-arrow-right me-2"></i>{{cat.name}}</a>
+            {% endfor%}
+        </div>
+    </div>
+    <!-- Category End -->
+
+    <!-- Recent Post Start -->
+    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+            <h3 class="mb-0">Recent Post</h3>
+        </div>
+        {% for post in recent_posts %}
+        <div class="d-flex rounded overflow-hidden mb-3">
+            <img class="img-fluid" src="{{post.thumbnail.url}}" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+            <a href="{% url 'blog:bp-detail' slug=post.slug %}" class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0 w-100">{{post.title}}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Recent Post End -->
+
+    <!-- Image Start -->
+    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+        <img src="img/blog-1.jpg" alt="" class="img-fluid rounded">
+    </div>
+    <!-- Image End -->
+</div>

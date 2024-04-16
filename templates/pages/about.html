@@ -1,0 +1,38 @@
+{% extends "ferdsilinks_website/base.html" %}
+{% load static %}
+
+<!-- Page title  -->
+{% block title %} Ferdsilinks | {{page_title}} {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+
+{% block heading %}Add category{% endblock heading %}
+
+<!-- Page Header -->
+{% block header %} 
+
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">About Us</h1>
+                    <a href="{% url 'pages:home' %}" class="h5 text-white">Home</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <a href="{% url 'pages:about' %}" class="h5 text-white">About</a>
+                </div>
+            </div>
+        </div>
+{% endblock header %} 
+
+{% block content %}
+    <!-- About Start -->
+    {% include 'pages/includes/about.html' %}
+    <!-- About End -->
+
+
+    <!-- Team Start -->
+    {% include 'pages/includes/team.html' %}
+    <!-- Team End -->
+
+    {% endblock content %}
