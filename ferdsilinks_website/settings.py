@@ -156,7 +156,9 @@ STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
 # STATIC_ROOT = '/usr/local/lsws/Example/ferdsilinks_website/ferdsilinks_website/static'
 STATIC_URL = '/static/'
 
+
 MEDIA_ROOT = os.path.join(CORE_DIR, 'media')
+# MEDIA_ROOT = '/usr/local/lsws/Example/ferdsilinks_website/ferdsilinks_website/media'
 MEDIA_URL = '/media/'
 
 # Extra places for collectstatic to find static files.
