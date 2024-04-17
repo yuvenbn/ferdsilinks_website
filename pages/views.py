@@ -28,3 +28,10 @@ class ContactPageView(TemplateView):
             'page_title': 'Contact',
             'active_links': 'contact'
         }
+
+class ProductsPageView(TemplateView):
+    template_name = "pages/products.html"
+    extra_context = {
+            'page_title': 'Products',
+            'active_links': 'product'
+        }

@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# Site Maps Config
+SITE_ID = 1
 
 # Application definition
 
@@ -37,6 +39,9 @@ DJANGO_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
+    "django.contrib.sites",
+    "django.contrib.sitemaps",
     
 ]
 
@@ -148,6 +153,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
+# STATIC_ROOT = '/usr/local/lsws/Example/ferdsilinks_website/ferdsilinks_website/static'
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(CORE_DIR, 'media')

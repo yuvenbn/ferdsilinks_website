@@ -1,5 +1,4 @@
 from django.urls import path
-
 from .views import *
 
 app_name = "pages"
@@ -16,4 +15,6 @@ urlpatterns = [
     # Contact...
     path('contact/', ContactPageView.as_view(), name='contact'),
 
+    # Products...
+    path('products/', ProductsPageView.as_view(), name='products'),
 ]

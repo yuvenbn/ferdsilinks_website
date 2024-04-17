@@ -1,0 +1,63 @@
+<div class="modal fade" id="downloadModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+            <div class="modal-header border-0">
+                <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <!-- <div class="input-group" style="max-width: 600px;">
+                    <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                    <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                </div> -->
+                <div class="row g-5 d-flex justify-content-center">
+                    <div class="col-lg-5">
+                        <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.2s">
+                            <form method="post" action="{% url 'download:solafide-accounting-download' %}">
+                                {% csrf_token %}
+                                <div class="row g-3">
+                                    <div class="col-xl-12">
+                                        <input type="text" name="user_fullname" class="form-control bg-light border-0" placeholder="Your Name"
+                                            style="height: 55px;" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" name="email" class="form-control bg-light border-0" placeholder="Your Email"
+                                            style="height: 55px;" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <select name="country" class="form-select bg-light border-0" style="height: 55px;">
+                                            <option value="">Select a member state</option>
+                                            <option value="Benin">Benin</option>
+                                            <option value="Burkina Faso">Burkina Faso</option>
+                                            <option value="Cameroon" selected>Cameroon</option>
+                                            <option value="Central African Republic">Central African Republic</option>
+                                            <option value="Chad">Chad</option>
+                                            <option value="Comoros">Comoros</option>
+                                            <option value="Congo, Democratic Republic of the">Congo, Democratic Republic of the</option>
+                                            <option value="Congo, Republic of the">Congo, Republic of the</option>
+                                            <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                            <option value="Gabon">Gabon</option>
+                                            <option value="Guinea">Guinea</option>
+                                            <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                            <option value="Mali">Mali</option>
+                                            <option value="Niger">Niger</option>
+                                            <option value="Senegal">Senegal</option>
+                                            <option value="Togo">Togo</option>
+                                          </select>
+                                    </div>
+                                    <!-- <div class="col-12">
+                                        <textarea class="form-control bg-light border-0" rows="3"
+                                            placeholder="Message"></textarea>
+                                    </div> -->
+                                    <div class="col-12">
+                                        <button class="btn btn-dark w-100 py-3" type="submit">Download Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

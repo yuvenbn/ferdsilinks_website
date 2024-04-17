@@ -3,6 +3,7 @@ from django.urls import path
 from .views import *
 
 app_name = "blog"
+
 urlpatterns = [
     # URL pattern for the blog post list (all)
     path('posts/', BlogPostListView.as_view(), name='bp-list'),
